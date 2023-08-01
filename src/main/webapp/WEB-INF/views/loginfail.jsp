@@ -9,6 +9,8 @@
 </head>
 <body>
 	<div class="inputcontent">
+	
+	
 		<h1>로그인</h1>
 		<form action="member.login" id="loginForm" method="post"
 			onsubmit="return loginCheck();">
