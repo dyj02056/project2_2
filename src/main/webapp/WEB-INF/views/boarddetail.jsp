@@ -44,6 +44,8 @@
 			</tr>
 		</table>
 	</div>
+
+	
 	<p>
 
 		<%
@@ -53,99 +55,142 @@
 			if (m_id.equals(b_writter) || m_id.equals("dyj02056")) {
 		%>
 	
+	<div class="container" style="float: left; width: 30%;">
+		<div class="row">
+			<div class="col-12">
+				<div>
+					<form action="updatego${mb3.b_no }">
+						<button type="submit" class="btn btn-success">수정</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container"  style="float: left; width: 30%;">
+		<div class="row">
+			<div class="col-12">
+				<div>
+
+					<form action="movieboard_delete${mb3.b_no}">
+						<button type="submit" class="btn btn-danger">삭제</button>
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container"  style="float: left; width: 30%;">
+		<div class="row">
+			<div class="col-12">
+				<div>
+
+					<form action="Board">
+						<button type="button" class="btn btn-secondary">목록</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- 
 	<div>
 		<tr>
 
-			
-				<td>
-					<form action="updatego${mb3.b_no }">
-						<button style="float: right; padding: 5px;" type="submit"
-							class="btn btn-secondary">수정</button>
-					</form>
-				</td>
-			
 
-			
-				<td>
-					<form action="movieboard_delete${mb3.b_no}">
-						<button style="float: right; padding: 5px;" type="submit"
-							class="btn btn-secondary">삭제</button>
-					</form>
-				</td>
-			
-			
-				<td>
-					<form action="Board">
-						<button style="float: right; padding: 5px;" type="submit"
-							class="btn btn-secondary">목록</button>
-					</form>
-				</td>
+			<td>
+				<form action="updatego${mb3.b_no }">
+					<button style="float: right;" type="submit"
+						class="btn btn-secondary">수정</button>
+				</form>
+
+
+
+
+
+				<form action="movieboard_delete${mb3.b_no}">
+					<button style="float: right;" type="submit"
+						class="btn btn-secondary">삭제</button>
+				</form>
+
+
+
+				<form action="Board">
+					<button style="float: right;" type="submit"
+						class="btn btn-secondary">목록</button>
+				</form>
+			</td>
 
 		</tr>
 	</div>
+	 -->
+
 
 
 	<%
 		} else {
 	%>
+
 	<form action="Board">
-		<button>목록</button>
+		<button style="float: right;" type="submit" class="btn btn-secondary">목록</button>
 	</form>
+
 	<%
 		}
 	%>
 
 	<p>
 	<form id="signupForm" action="reply.write${mb3.b_no}" method="post">
-		<table class="rwd-table">
-			<tr>
-				<td><input type="hidden" name="b_no" value="${mb3.b_no}"></td>
-				<td><input type="hidden" name="r_writter" value="${m_id}"></td>
 
-				<td>
-					<div class="input-group mb-3">
-						<span class="input-group-text" id="basic-addon1">${m_id } </span>
-						<input name="r_content" id="r_content" placeholder="댓글 내용"
-							onfocus="this.placeholder = ''">
-					</div>
-				</td>
-				<td>
+		<tr>
+			<td><input type="hidden" name="b_no" value="${mb3.b_no}"></td>
+			<td><input type="hidden" name="r_writter" value="${m_id}"></td>
+
+			<td>
+				<div class="input-group mb-3">
+
+					<span class="input-group-text" id="basic-addon1">${m_id } </span> <input
+						name="r_content" id="r_content" placeholder="댓글 내용"
+						onfocus="this.placeholder = ''">
 
 					<button style="padding: 5px;" style="float: right;" type="submit"
 						class="btn btn-light">등록</button>
-				</td>
-		</table>
+				</div>
+			</td>
+			<td></td>
+		</tr>
 	</form>
 
-	<table class="rwd-table">
-		<c:forEach var="r" items="${rs }">
-			<tr>
-				<td>
-					<h6 style="color: white;">${r.r_writter }
-						: ${r.r_content }
-						<c:set var="r_writter" value="${r.r_writter}" />
-						<% 
-						String r_writter = (String)pageContext.getAttribute("r_writter");
-						if (r_writter.equals(m_id)|| m_id.equals("dyj02056")){
-							%>
-							<a href="delete_reply${r.r_no}"
-									style="text-decoration-line: none; color: white;">삭제
-									</a>
-							<%
+
+	<c:forEach var="r" items="${rs }">
+		<tr>
+			<td>
+				<h6 style="color: white;">${r.r_writter }
+					: ${r.r_content }
+					<c:set var="r_writter" value="${r.r_writter}" />
+					<%
+						String r_writter = (String) pageContext.getAttribute("r_writter");
+							if (r_writter.equals(m_id) || m_id.equals("dyj02056")) {
+					%>
+					<a href="delete_reply${r.r_no}" align="left"
+						style="text-decoration-line: none; color: white;">
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 삭제 </a>
+					<%
 						}
-						%>
-						 
-							
-					</h6>
+					%>
+
+
+				</h6>
 
 
 
-				</td>
+			</td>
 
 
-			</tr>
-		</c:forEach>
-	</table>
+		</tr>
+	</c:forEach>
+
 
 
 

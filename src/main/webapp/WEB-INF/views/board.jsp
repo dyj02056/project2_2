@@ -73,5 +73,6 @@ html>
 	<button style="float: right;" type="submit" class="btn btn-secondary">게시글 작성하기</button>
 		
 	</form>
+	
 </body>
 </html>
