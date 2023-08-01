@@ -11,13 +11,13 @@
 <body>
 	 <table id="SmallheaderTBL1">
         <tr>
-            <td id="loginuserID">${empty m_id ? '   ' : m_id}</td>
+            <td style="color: white;" id="loginuserID">${empty m_id ? '   ' : m_id}</td>
             <c:if test="${empty m_id}">
                 <td><a href="login"><button id="login" class="maintopbutton">Login</button></a></td>
                 <td><a href="signup"><button id="signup" class="maintopbutton">Sign</button></a></td>
             </c:if>
             <c:if test="${not empty m_id}">
-                <td>님 환영합니다</td>
+                <td style="color: white;">님 환영합니다</td>
                 
                 <td><a href="profile"><button id="profile" class="maintopbutton">Mypage</button></a></td>   
                 
