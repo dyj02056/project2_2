@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.movie.board.ReplyMapper">
+	<insert id="writeReply" parameterType="com.movie.board.Reply">
+		insert into mbreply(r_no, b_no, r_content, r_writter)
+		values(mbreply_seq.nextval, #{b_no }, #{r_content}, #{r_writter } )
+	</insert>
+	<select id="listReply"
+		resultType="com.movie.board.Reply">
+		select * from mbreply
+	</select>
+	
+	<select id="detailReply"
+		parameterType="int"
+		resultType="com.movie.board.Reply">
+		select * from mbreply where b_no = #{b_no }
+	</select>
+	
+	
+	<delete id="deleteReply" parameterType="int">
+		delete from mbreply where r_no=#{r_no}
+	</delete>
+	
+</mapper>

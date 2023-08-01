@@ -1,0 +1,59 @@
+@charset "UTF-8";
+@font-face{
+	font-family: 'nanum';
+	src: url('../font/NanumGothic.otf') format('truetype');
+}
+
+
+#SmallheaderTBL1 {
+    background-color: #444444;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+}
+
+#SmallheaderTBL1 td {
+    margin-left: 10px;
+}
+
+button{
+	font-family: 'nanum';
+}
+
+#loginuserID {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.maintopbutton {
+    background-color: transparent;
+    border: none;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+.maintopbutton:hover {
+    color: #FF0000;
+}
+/* 본문 */
+#article { 
+	background-color : #333333 ;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	height: 1000px; 
+}
+
+body {
+	font-family: 'nanum';
+	background-color: #444444;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 0;
+	margin-right: 0;
+}

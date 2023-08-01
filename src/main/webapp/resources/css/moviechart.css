@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+.container {
+	display: flex;
+	justify-content: center;
+	background-color: #333333;
+}
+
+.chart-container {
+	background-color: #333333;
+}
+
+.heading {
+	text-align: center;
+	color: white;
+	font-size: 36px;
+	padding: 10px 0;
+	background-color: #333333;
+}
+
+#movieChart {
+	margin: 20px auto;
+	width: 1200px; height : 700px;
+	background-color: #333333;
+	height: 700px;
+}
+
+text {
+	fill: black;
+}
+
+g.x text {
+	fill: red;
+	font-size: 14px;
+}
+
+g.y text {
+	fill: green;
+	font-size: 14px;
+}
+
+text.movie-title {
+	font-size: 14px;
+	font-weight: bold;
+	text-anchor: middle;
+}
+
+text.movie-title tspan {
+	x: 0;
+	dy: 1.2em;
+}

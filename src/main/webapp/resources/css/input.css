@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+.inputcontent {
+	margin-top: 50px;
+}
+
+.inputcontent h1 {
+	font-size: 30px;
+	text-align: center;
+}
+
+.inputcontent table {
+	margin: auto;
+}
+
+.inputcontent td {
+	padding: 10px;
+}
+
+.inputcontent input {
+	width: 400px;
+	height: 60px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-color: #FFFFFF;
+	background: #FFFFFF;
+	font-size: 16px;
+}
+
+.inputcontent button {
+	width: 400px;
+	height: 60px;
+	border: none;
+	color: white;
+	margin: 0px;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+	background-color: #2E2E2E;
+	text-align: center;
+}
+
+.inputcontent button:hover {
+	background-color: #424242;
+}
+
+.inputcontent a {
+	text-decoration: none;
+}
+
+.inputcontent p {
+	text-align: center;
+	margin: 0px;
+}
+
+.loginfail h1 {
+	
+}
+
+.logout-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #333333;
+}
+
+.logout-message {
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	color: white;
+}
+
+.logout-button {
+	width: 400px;
+	height: 60px;
+	border: none;
+	color: white;
+	margin: 20px 0;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+	background-color: #2E2E2E;
+	text-align: center;
+}
+
+.logout-button:hover {
+	background-color: #424242;
+}
