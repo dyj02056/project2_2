@@ -7,6 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="resources/css/information.css">
 <link rel="stylesheet" href="resources/css/detailboard.css">
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
@@ -18,7 +19,7 @@
 </head>
 <body>
 	<div class="inputcontent">
-		<h1 style="color: white;" align="center">게시글 정보</h1>
+		<h1 class="titleH1">게시글 정보</h1>
 
 		<table class="rwd-table">
 			<tr>
@@ -44,6 +45,57 @@
 		</table>
 	</div>
 	<p>
+
+		<%
+			String m_id = (String) session.getAttribute("m_id");
+			String b_writter = (String) session.getAttribute("mb3writter");
+
+			if (m_id.equals(b_writter) || m_id.equals("dyj02056")) {
+		%>
+	
+	<div>
+		<tr>
+
+			
+				<td>
+					<form action="updatego${mb3.b_no }">
+						<button style="float: right; padding: 5px;" type="submit"
+							class="btn btn-secondary">수정</button>
+					</form>
+				</td>
+			
+
+			
+				<td>
+					<form action="movieboard_delete${mb3.b_no}">
+						<button style="float: right; padding: 5px;" type="submit"
+							class="btn btn-secondary">삭제</button>
+					</form>
+				</td>
+			
+			
+				<td>
+					<form action="Board">
+						<button style="float: right; padding: 5px;" type="submit"
+							class="btn btn-secondary">목록</button>
+					</form>
+				</td>
+
+		</tr>
+	</div>
+
+
+	<%
+		} else {
+	%>
+	<form action="Board">
+		<button>목록</button>
+	</form>
+	<%
+		}
+	%>
+
+	<p>
 	<form id="signupForm" action="reply.write${mb3.b_no}" method="post">
 		<table class="rwd-table">
 			<tr>
@@ -62,7 +114,6 @@
 					<button style="padding: 5px;" style="float: right;" type="submit"
 						class="btn btn-light">등록</button>
 				</td>
-			</tr>
 		</table>
 	</form>
 
@@ -71,7 +122,20 @@
 			<tr>
 				<td>
 					<h6 style="color: white;">${r.r_writter }
-						: ${r.r_content } <a href="delete_reply${r.r_no}">삭제</a>
+						: ${r.r_content }
+						<c:set var="r_writter" value="${r.r_writter}" />
+						<% 
+						String r_writter = (String)pageContext.getAttribute("r_writter");
+						if (r_writter.equals(m_id)|| m_id.equals("dyj02056")){
+							%>
+							<a href="delete_reply${r.r_no}"
+									style="text-decoration-line: none; color: white;">삭제
+									</a>
+							<%
+						}
+						%>
+						 
+							
 					</h6>
 
 
@@ -86,38 +150,5 @@
 
 
 	<p>
-		<%
-			String m_id = (String) session.getAttribute("m_id");
-			String b_writter = (String) session.getAttribute("mb3writter");
-
-			if (m_id.equals(b_writter) || m_id.equals("dyj02056")) {
-		%>
-	
-	<form action="updatego${mb3.b_no }">
-		<button style="float: right;" type="submit" class="btn btn-secondary">
-			수정</button>
-	</form>
-	&nbsp;
-	<form action="movieboard_delete${mb3.b_no}">
-		<button style="float: right;" type="submit" class="btn btn-secondary">
-			삭제</button>
-	</form>
-	&nbsp;
-	<form action="Board">
-		<button style="float: right;" type="submit" class="btn btn-secondary">
-			목록</button>
-	</form>
-	<%
-		} else {
-	%>
-	<form action="Board">
-		<button>목록</button>
-	</form>
-	<%
-		}
-	%>
-
-
-
 </body>
 </html>

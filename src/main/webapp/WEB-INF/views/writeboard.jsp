@@ -15,7 +15,7 @@
 </head>
 <body>
 	<div>
-		<h1 style="color: white;" align="center">게시글 작성</h1>
+		<h1 class="titleH1" >게시글 작성</h1>
 		<form id="signupForm" action="movieboard.reg" method="post">
 			<table class="rwd-table">
 
@@ -38,6 +38,7 @@
 						<div class="input-group">
 							<span class="input-group-text">게시글 내용</span>
 							<textarea name="b_content" id="b_content" class="form-control"
+								cols="20"
 								aria-label="With textarea" style="resize: none;"
 								placeholder="내용을 입력해 주세요" onfocus="this.placeholder = ''"></textarea>
 

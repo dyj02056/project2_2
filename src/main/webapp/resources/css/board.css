@@ -4,8 +4,16 @@ family=Open+Sans:600,700';
 {font-family: 'Open Sans', sans-serif;}
 
 
-h2{
-	text-align:center;
+.titleH1 {
+
+  text-align: center;
+  background-color: #333333;
+  margin: 20px;
+  padding: 0;
+  font-size: 36px;
+  color: #ffffff;
+  margin-bottom: 40px;
+  font-weight: 700;
 }
 
 textarea {
@@ -26,14 +34,14 @@ textarea {
 
 .rwd-table tr:first-child {
   border-top: none;
-  background: #808080;
+  background: #606060;
   color: #fff;
 }
 
 .rwd-table tr {
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
-  background-color: #C0C0C0;
+  background-color: #808080;
   text-align: "center";
 }
 
@@ -91,7 +99,7 @@ textarea {
 }
 @media screen and (min-width: 600px) {
   .rwd-table tr:hover:not(:first-child) {
-    background-color: #66B2FF;
+    background-color: #202020;
   }
   .rwd-table td:before {
     display: none;

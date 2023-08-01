@@ -4,9 +4,16 @@ family=Open+Sans:600,700';
 {font-family: 'Open Sans', sans-serif;}
 
 
+.titleH1 {
 
-h2{
-	text-align:center;
+  text-align: center;
+  background-color: #333333;
+  margin: 20px;
+  padding: 0;
+  font-size: 36px;
+  color: #ffffff;
+  margin-bottom: 40px;
+  font-weight: 700;
 }
 
 textarea {
@@ -27,14 +34,14 @@ textarea {
 
 .rwd-table tr:first-child {
   border-top: none;
-  background: #808080;
+  background: #606060;
   color: #fff;
 }
 
 .rwd-table tr {
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
-  background-color: #C0C0C0;
+  background-color: #808080;
   text-align: "center";
 }
 

@@ -3,6 +3,14 @@
 	font-family: 'nanum';
 	src: url('../font/NanumGothic.otf') format('truetype');
 }
+
+.titleH1 {
+  font-size: 36px;
+  color: #ffffff;
+  margin-bottom: 40px;
+
+}
+
 .headerP {
 	margin: 20px;
 }

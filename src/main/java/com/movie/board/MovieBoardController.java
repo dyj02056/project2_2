@@ -82,6 +82,7 @@ public class MovieBoardController {
 		model.addAttribute("mb3", mb3);
 		hs.setAttribute("mb3", mb3);
 		hs.setAttribute("mb3writter", mb3.getB_writter());
+		
 
 		List<Reply> rs = rservice.detailReply(b_no);
 		model.addAttribute("rs", rs);
