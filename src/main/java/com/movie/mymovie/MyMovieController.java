@@ -37,6 +37,7 @@ public class MyMovieController {
 		Member member = (Member)hs.getAttribute("memberlogin");
 		req.setAttribute("member", member);
 		
+	
 		List<MyMovie> mml = mservice.listMyMovie((String)hs.getAttribute("m_id"));
 		model.addAttribute("mml",mml);
 		hs.setAttribute("mml", mml);
