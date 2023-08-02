@@ -1,5 +1,21 @@
 @charset "UTF-8";
 
+body {
+	font-family: Arial, sans-serif;
+	text-align: center;
+	background-color: #444444;
+}
+
+.titleH1 {
+    color: white;
+ 	font-weight: 700;
+    text-align: center;
+    font-size: 36px;
+    margin-top: 20px;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
 .container {
 	display: flex;
 	justify-content: center;
@@ -25,25 +41,7 @@
 	height: 700px;
 }
 
-text {
-	fill: black;
-}
 
-g.x text {
-	fill: red;
-	font-size: 14px;
-}
-
-g.y text {
-	fill: green;
-	font-size: 14px;
-}
-
-text.movie-title {
-	font-size: 14px;
-	font-weight: bold;
-	text-anchor: middle;
-}
 
 text.movie-title tspan {
 	x: 0;

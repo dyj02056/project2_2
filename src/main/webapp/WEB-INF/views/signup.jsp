@@ -20,7 +20,7 @@
     </style>
     <script type="text/javascript">
         
-        var existingIds = ["john123", "alice567", "bob987"];
+    var existingIds = ["aaaa1234", "sw12345", "so12345"];
         function showPasswordCheckMsg() {
             var password = document.getElementById("m_pw").value;
             var passwordConfirm = document.getElementById("m_pwchk").value;
@@ -44,13 +44,16 @@
                 idMsg.innerHTML = "영소문자+숫자, 영소문자, 숫자 5~15자만 사용 가능합니다.";
                 return false;
             } else {
-                idMsg.innerHTML = "";
+            	idMsg.innerHTML = "아이디가 올바르게 작성되었습니다.";
+                idMsg.style.color = "green";
             }
             if (existingIds.includes(m_id)) {
                 idMsg.innerHTML = "이미 사용 중인 아이디입니다. 다른 아이디를 입력해주세요.";
+                idMsg.style.color = "red";
                 return false;
             } else {
-                idMsg.innerHTML = "";
+            	idMsg.innerHTML = "아이디가 올바르게 작성되었습니다.";
+                idMsg.style.color = "green";
             }
             return true;
         }
@@ -62,7 +65,8 @@
                 emailMsg.innerHTML = "올바른 이메일 형식이 아닙니다.";
                 return false;
             } else {
-                emailMsg.innerHTML = "";
+            	 emailMsg.innerHTML = "이메일이 올바르게 작성되었습니다.";
+                 emailMsg.style.color = "green";
             }
             return true;
         }

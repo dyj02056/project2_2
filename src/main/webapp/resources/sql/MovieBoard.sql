@@ -14,7 +14,7 @@ purge recyclebin;
 insert into movieboard(b_no, b_title, b_when, b_content,b_writter) 
 	values (movieboard_seq.nextval,'테스트',default,'테스트','dyj02056');
 
-
+SELECT * FROM ALL_TAB_COLUMNS WHERE  LIKE '%movieboard%';
 create sequence movieboard_seq;
 drop sequence movieboard_seq;
 select * from tab;

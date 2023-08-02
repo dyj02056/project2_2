@@ -1,5 +1,7 @@
 package com.movie.mymovie;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.ibatis.session.SqlSession;
@@ -22,6 +24,10 @@ public class MyMovieDAO {
 			req.setAttribute("rm", "나의 영화 등록 실패");
 			// TODO: handle exception
 		}
+	}
+	
+	public List<MyMovie> listMyMovie(String mm_id){
+		return ss3.getMapper(MyMovieMapper.class).listMyMovie(mm_id);
 	}
 	
 }

@@ -94,38 +94,6 @@
 	</div>
 
 
-	<!-- 
-	<div>
-		<tr>
-
-
-			<td>
-				<form action="updatego${mb3.b_no }">
-					<button style="float: right;" type="submit"
-						class="btn btn-secondary">수정</button>
-				</form>
-
-
-
-
-
-				<form action="movieboard_delete${mb3.b_no}">
-					<button style="float: right;" type="submit"
-						class="btn btn-secondary">삭제</button>
-				</form>
-
-
-
-				<form action="Board">
-					<button style="float: right;" type="submit"
-						class="btn btn-secondary">목록</button>
-				</form>
-			</td>
-
-		</tr>
-	</div>
-	 -->
-
 
 
 	<%

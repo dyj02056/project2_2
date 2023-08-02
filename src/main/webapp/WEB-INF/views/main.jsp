@@ -12,6 +12,11 @@
 <script type="text/javascript" src="resources/js/e1.js"></script>
 <script type="text/javascript" src="resources/js/ValidChecker.js"></script>
 <script type="text/javascript"></script>
+<style type="text/css">
+body {
+    background-color: #444444;
+}
+</style>
 <style>
   
   #fixed-image {
