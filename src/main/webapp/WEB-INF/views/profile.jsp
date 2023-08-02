@@ -9,9 +9,10 @@
 </head>
 <body>
     <table class="menuTBL">
-    <tr>
-      <td align="center" style="font-size: 32px;">회원정보</td>
-    </tr>
+    <h1 class="titleH1" style="color: white; font-weight:700;" align="center">
+    MemberInfo
+			</h1>
+   
       </table>
 
         <table class="boardTBL">

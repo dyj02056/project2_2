@@ -10,7 +10,8 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 <body>
-     <h1 class="heading">Movies Weekly Chart</h1>
+     <h1 class="titleH1" style="color: white; font-weight:700;" align="center">
+     Movies Weekly Chart</h1>
 
       <div class="container">
         <div id="movieChart" class="chart-container"></div>

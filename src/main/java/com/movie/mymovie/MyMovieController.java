@@ -28,6 +28,8 @@ public class MyMovieController {
 //		mm.setMm_id((String)hs.getAttribute("m_id"));
 //		
 //		mmDAO.regMyMovie(mm, req);
+//		
+//		
 //	}
 	
 }
