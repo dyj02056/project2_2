@@ -8,4 +8,9 @@
 	<select id="listMyMovie" resultType="com.movie.mymovie.MyMovie">
 		select * from mymovie where mm_id = #{mm_id}
 	</select>
+	
+	
+	<delete id="deleteMyMovie" parameterType="String">
+		delete from mymovie where mm_name=#{mm_name}
+	</delete>
 </mapper>

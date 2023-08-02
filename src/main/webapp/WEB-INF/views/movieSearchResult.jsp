@@ -92,6 +92,33 @@
 				<p class="movie-release-date">
 					장르:<%=genreAlt%></p>
 			</div>
+			<%		HttpSession hs = request.getSession();
+					String m_id = "";
+							try {
+
+								hs = request.getSession();
+								m_id = (String) hs.getAttribute("m_id");
+								if (!m_id.equals("")) {
+				%>
+
+				
+				<form action="mymovie.reg" name="input1">
+					
+					<input type="hidden" name="mm_name" value="<%=movieNm %>">
+					<input type="hidden" name="mm_id" value="<%=m_id %>"></input>
+					<button type="submit" class="btn btn-success">등록</button>
+				
+				</form>
+				
+				<%
+					}
+
+							} catch (Exception e) {
+								e.printStackTrace();
+							}
+				%>
+			
+			
 		</div>
 		<%
 			}

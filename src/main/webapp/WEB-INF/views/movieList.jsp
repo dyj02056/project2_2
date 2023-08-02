@@ -29,7 +29,8 @@
 <script type="text/javascript"></script>
 </head>
 <body>
-	<h1 style="color: white; font-weight:700;" align="center">Box Office Movies</h1>
+	<h1 style="color: white; font-weight: 700;" align="center">Box
+		Office Movies</h1>
 
 	<div class="container">
 		<%
@@ -69,7 +70,7 @@
 				for (int i = 0; i < dbol.size(); i++) {
 					JSONObject obj = (JSONObject) dbol.get(i);
 					String title = (String) obj.get("movieNm");
-					//hs.setAttribute("mm_name",title);
+					//hs.setAttribute("mm_name", title);
 					String rank = (String) obj.get("rank");
 					String salesShare = (String) obj.get("salesShare");
 					String releaseDate = (String) obj.get("openDt");
@@ -111,6 +112,34 @@
 						개봉일:
 						<%=releaseDate%></p>
 				</div>
+
+				<%
+					String m_id = "";
+							try {
+
+								hs = request.getSession();
+								m_id = (String) hs.getAttribute("m_id");
+								if (!m_id.equals("")) {
+				%>
+
+				
+				<form action="mymovie.reg" name="input1">
+					
+					<input type="hidden" name="mm_name" value="<%=title %>">
+					<input type="hidden" name="mm_id" value="<%=m_id %>"></input>
+					<button type="submit" class="btn btn-success">등록</button>
+				
+				</form>
+				
+				<%
+					}
+
+							} catch (Exception e) {
+								e.printStackTrace();
+							}
+				%>
+
+
 
 			</div>
 			<%

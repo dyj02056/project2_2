@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.movie.board.MovieBoardService;
 import com.movie.mymovie.MyMovie;
+import com.movie.mymovie.MyMovieDAO;
 
 @Controller
 public class MemberController {
@@ -76,8 +77,9 @@ public class MemberController {
         req.setAttribute("member", member);
         session.setAttribute("member",member);
         
-//        List<MyMovie> mml = (List)session.getAttribute("mml");
-//        model.addAttribute("mml",mml);
+        
+        List<MyMovie> mml = (List<MyMovie>)session.getAttribute("mml");
+        model.addAttribute("mml",mml);
 
         req.setAttribute("contentPage", "profile.jsp");
         req.setAttribute("topmenu", "maintop.jsp");

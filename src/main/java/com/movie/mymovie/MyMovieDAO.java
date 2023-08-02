@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class MyMovieDAO {
 	@Autowired 
-	private SqlSession ss3;
+	private  SqlSession ss3;
 	
 	public void regMyMovie(MyMovie mm, HttpServletRequest req) {
 		try {
@@ -26,8 +26,12 @@ public class MyMovieDAO {
 		}
 	}
 	
-	public List<MyMovie> listMyMovie(String mm_id){
+	public  List<MyMovie> listMyMovie(String mm_id){
 		return ss3.getMapper(MyMovieMapper.class).listMyMovie(mm_id);
+	}
+	
+	public void deleteMyMovie( String mm_name) {
+		ss3.getMapper(MyMovieMapper.class).deleteMyMovie( mm_name);
 	}
 	
 }
