@@ -86,7 +86,7 @@
 				<div>
 
 					<form action="Board">
-						<button type="button" class="btn btn-secondary">목록</button>
+						<button type="submit" class="btn btn-secondary">목록</button>
 					</form>
 				</div>
 			</div>

@@ -17,14 +17,14 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>영화 검색 결과</title>
+    <title>Movie Search Result</title>
     <link rel="stylesheet" href="resources/css/movie.css">
     <script type="text/javascript" src="resources/js/jQuery.js"></script>
     <script type="text/javascript" src="resources/js/e1.js"></script>
     <script type="text/javascript"></script>
 </head>
 <body>
-    <h1 class="heading">영화 검색 결과</h1>
+   
 
     <div class="container">
         <% try {
@@ -76,7 +76,7 @@
             <a href="<%=trailerLink %>" target="_blank">
                 <img src="<%=imageUrl %>" alt="<%=title %>" width="200" height="300">
             </a>
-            <h2>영화 제목 : <%=movieNm %></h2>
+            <h2 style="padding:4px;"> <%=movieNm %></h2>
             <div class="movie-info">
                 <p class="movie-release-date">개봉일:<%=openDt%></p>
                 <p class="movie-release-date">장르:<%=genreAlt%></p>

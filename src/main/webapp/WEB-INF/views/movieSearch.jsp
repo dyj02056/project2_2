@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Chart</title>
-<link rel="stylesheet" href="resources/css/boardLayout.css">
+
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
 	rel="stylesheet"
@@ -18,20 +18,21 @@
 </script>
 </head>
 <body>
+	<div style="padding:10px;">
+		<h1 class="titleH1" style="color: white; font-weight:700;" align="center">Movie
+			Search</h1>
+	</div>
+	<form name="SearchForm" action="search" method="get">
+		<div class="input-group mb-3">
 
-
-
-<form name="SearchForm" action="search" method="get">
-	<div class="input-group mb-3">
-		
 			<input name="movie_search" type="text" class="form-control"
-				placeholder="input keyword" aria-label="Recipient's username"
+				placeholder="영화 제목" aria-label="Recipient's username"
 				aria-describedby="button-addon2">
 			<button class="btn btn-outline-secondary" type="submit"
 				id="button-addon2">Search</button>
-		
-	</div>
-</form>
+
+		</div>
+	</form>
 
 
 	<div>
