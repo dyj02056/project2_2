@@ -29,7 +29,7 @@
             
             if (password === passwordConfirm) {
                 passwordMsg.innerHTML = "비밀번호가 일치합니다.";
-                passwordMsg.style.color = "green";
+                passwordMsg.style.color = "white";
                 msg.innerHTML = "";
             } else {
                 passwordMsg.innerHTML = "비밀번호가 일치하지 않습니다.";
@@ -45,7 +45,7 @@
                 return false;
             } else {
             	idMsg.innerHTML = "아이디가 올바르게 작성되었습니다.";
-                idMsg.style.color = "green";
+                idMsg.style.color = "white";
             }
             if (existingIds.includes(m_id)) {
                 idMsg.innerHTML = "이미 사용 중인 아이디입니다. 다른 아이디를 입력해주세요.";
@@ -53,7 +53,7 @@
                 return false;
             } else {
             	idMsg.innerHTML = "아이디가 올바르게 작성되었습니다.";
-                idMsg.style.color = "green";
+                idMsg.style.color = "white";
             }
             return true;
         }
@@ -66,7 +66,7 @@
                 return false;
             } else {
             	 emailMsg.innerHTML = "이메일이 올바르게 작성되었습니다.";
-                 emailMsg.style.color = "green";
+                 emailMsg.style.color = "white";
             }
             return true;
         }

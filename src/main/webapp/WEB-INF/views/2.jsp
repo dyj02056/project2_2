@@ -10,8 +10,9 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 <body>
-   <h1 class="titleH1">Movies Weekly Chart</h1>
 
+	<h1 class="titleH1">Movies Weekly Chart</h1>
+    
       <div class="container">
         <div id="movieChart" class="chart-container"></div>
     </div>
@@ -47,39 +48,53 @@
         xhr.open("GET", url, true);
         xhr.send();
     }
-    google.charts.load('current', {'packages': ['bar']});        google.charts.setOnLoadCallback(function() {
+    google.charts.load('current', {'packages': ['bar']});
+    google.charts.setOnLoadCallback(function() {
         callApi(function() {
             drawChart();
         });
     });
+
     function drawChart() {
         var data = new google.visualization.DataTable();
         data.addColumn('string', '영화 제목'); 
         data.addColumn('number', '누적 관객수 ');
         data.addRows(movieData);
+
         var options = {
-            chart: {title: '',
-                subtitle: ''
-            },
-            bars: 'vertical',
-            is3D: true,
-            vAxis: { title: '',
-                minValue: 0,
-                textStyle: { color: 'red', fontSize: 12, bold: true }
-            },
-            hAxis: {title: '영화 제목',
-                textStyle: { color: 'green', fontSize: 12, bold: true }
-            }, height: 700,
-            fontSize: 20
-        };
+                chart: {
+                    title: '',
+                    subtitle: ''
+                },
+                bars: 'vertical',
+                is3D: true,
+                vAxis: {
+                    title: '',
+                    minValue: 0,
+                    textStyle: { color: 'red', fontSize: 12, bold: true }
+                },
+                hAxis: {
+                    title: '영화 제목',
+                    textStyle: { color: 'green', fontSize: 12, bold: true }
+                },
+                height: 700,
+                fontSize: 20,
+                legend: 'none',
+                vAxis: { textStyle: { color: 'blue', fontSize: 14 } },
+                hAxis: { textStyle: { color: 'black', bold: true, fontSize: 14 }, gridlines: { count: 0 } },
+                chartArea: { left: 50, top: 30, width: '70%', height: '70%', backgroundColor: 'gray' },
+                colors: ['yellow'],
+                tooltip: { textStyle: { color: 'black', fontSize: 12, bold: true }, showColorCode: true }
+            };
+
         var view = new google.visualization.DataView(data);
         view.setColumns([{
             type: 'string',
             label: '영화 제목',
             calc: function (dt, row) {
                 var title = dt.getFormattedValue(row, 0);
-                if (title.length > 8) {
-                    var parts = title.match(/.{1,8}/g);
+                if (title.length > 7) {
+                    var parts = title.match(/.{1,7}/g);
                     if (parts.length > 1) {
                         return parts.join('\n');
                     }
@@ -87,12 +102,10 @@
                 return title;
             }
         }, 1]);
-        var chart = new google.charts.Bar(document.getElementById('movieChart'));  chart.draw(view, google.charts.Bar.convertOptions(options));
-        }
+
+        var chart = new google.charts.Bar(document.getElementById('movieChart'));
+        chart.draw(view, google.charts.Bar.convertOptions(options));
+    }
     </script>
 </body>
 </html>
-
-
-
-

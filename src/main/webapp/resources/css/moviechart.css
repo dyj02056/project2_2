@@ -23,11 +23,11 @@ body {
 }
 
 .chart-container {
-	background-color: #333333;
+	    background-color: #333333;
 }
 
 .heading {
-	text-align: center;
+	color: #333333;
 	color: white;
 	font-size: 36px;
 	padding: 10px 0;
