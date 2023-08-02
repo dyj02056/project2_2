@@ -47,7 +47,7 @@
 			<td>${member.m_email}</td>
 		</tr>
 	</table>
-	
+	<!-- 
 	<table>
 		<c:forEach var="mm" items="${mml }">
 					<tr>
@@ -59,6 +59,8 @@
 					</tr>
 				</c:forEach>
 	</table>
+	 -->
+	
 
 
 

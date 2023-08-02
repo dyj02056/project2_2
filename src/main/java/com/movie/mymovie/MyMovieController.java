@@ -27,25 +27,25 @@ public class MyMovieController {
 	@Autowired
 	private SqlSession ss3;
 	
-	@RequestMapping(value="/mymovie.reg", method=RequestMethod.GET)
-	public String regMyMovie(MyMovie mm, HttpServletRequest req, Model model) {
-		HttpSession hs = req.getSession();
-		mm.setMm_id((String)hs.getAttribute("m_id"));
-		mm.setMm_name((String)hs.getAttribute("mm_name"));
-		mmDAO.regMyMovie(mm, req);
-		
-		Member member = (Member)hs.getAttribute("memberlogin");
-		req.setAttribute("member", member);
-		
+//	@RequestMapping(value="/mymovie.reg", method=RequestMethod.GET)
+//	public String regMyMovie(MyMovie mm, HttpServletRequest req, Model model) {
+//		HttpSession hs = req.getSession();
+//		mm.setMm_id((String)hs.getAttribute("m_id"));
+//		mm.setMm_name((String)req.getAttribute("mm_name"));
+//		mmDAO.regMyMovie(mm, req);
+//		
+//		Member member = (Member)hs.getAttribute("memberlogin");
+//		req.setAttribute("member", member);
+//		
 	
-		List<MyMovie> mml = mservice.listMyMovie((String)hs.getAttribute("m_id"));
-		model.addAttribute("mml",mml);
-		hs.setAttribute("mml", mml);
-		
-		req.setAttribute("contentPage", "profile.jsp");
-		req.setAttribute("topmenu", "maintop.jsp");
-		return "main";
-		
-	}
+//		List<MyMovie> mml = mservice.listMyMovie((String)hs.getAttribute("m_id"));
+//		model.addAttribute("mml",mml);
+//		hs.setAttribute("mml", mml);
+//		
+//		req.setAttribute("contentPage", "profile.jsp");
+//		req.setAttribute("topmenu", "maintop.jsp");
+//		return "main";
+//		
+//	}
 	
 }

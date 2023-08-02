@@ -72,8 +72,6 @@
 					String openDt = (String) obj.get("openDt");
 					String genreAlt = (String) obj.get("genreAlt");
 
-					HttpSession hs = request.getSession();
-					hs.setAttribute("mm_name", movieNm);
 
 					String imageUrl = MovieApiUtil.getImageUrlFromTitle(movieNm);
 					if (imageUrl == null) {
@@ -94,30 +92,6 @@
 				<p class="movie-release-date">
 					장르:<%=genreAlt%></p>
 			</div>
-			<%
-				String m_id = "";
-						try {
-
-							m_id = (String) hs.getAttribute("m_id");
-							if (!m_id.equals("")) {
-			%>
-			<form action="mymovie.reg">
-				<button style="padding: 5px;" style="float: right;" type="submit"
-						class="btn btn-success">등록</button>
-		
-			</form>
-			<%
-				}
-
-						} catch (Exception e) {
-							e.printStackTrace();
-						}
-			%>
-
-
-
-
-
 		</div>
 		<%
 			}

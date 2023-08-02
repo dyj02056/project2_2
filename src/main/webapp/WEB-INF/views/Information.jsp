@@ -14,11 +14,7 @@
 <body>
 	 <h1 class="titleH1">Information</h1>
 
-  <table class="menuTBL">
-    <tr>
-      <td align="center" style="font-size: 36px;">Menu</td>
-    </tr>
-  </table>
+
   <table class="boardTBL"> 
     <tr>
       <td>Information - 프로젝트 페이지 메뉴에 대한 설명</td>

@@ -76,8 +76,8 @@ public class MemberController {
         req.setAttribute("member", member);
         session.setAttribute("member",member);
         
-        List<MyMovie> mml = (List)session.getAttribute("mml");
-        model.addAttribute("mml",mml);
+//        List<MyMovie> mml = (List)session.getAttribute("mml");
+//        model.addAttribute("mml",mml);
 
         req.setAttribute("contentPage", "profile.jsp");
         req.setAttribute("topmenu", "maintop.jsp");
