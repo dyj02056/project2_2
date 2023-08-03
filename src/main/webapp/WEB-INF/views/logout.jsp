@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="resources/css/input.css">
 </head>
 <body>
+
 	<div class="logout-container">
 		<div class="logout-message">
 			<h1>로그아웃되었습니다.</h1>
