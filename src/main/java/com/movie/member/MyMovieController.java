@@ -1,4 +1,4 @@
-package com.movie.mymovie;
+package com.movie.member;
 
 import java.util.List;
 
@@ -52,6 +52,7 @@ public class MyMovieController {
 	@RequestMapping(value="mymovie_delete", method=RequestMethod.GET)
 	public String deleteMyMovie(HttpServletRequest req,
 		Model model, MyMovie mm, String mm_name) {
+		System.out.println(mm_name);
 		mservice.deleteMyMovie(mm_name);
 		HttpSession hs = req.getSession();
 		mm.setMm_id((String) hs.getAttribute("m_id"));

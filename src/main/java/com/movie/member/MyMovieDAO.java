@@ -1,4 +1,4 @@
-package com.movie.mymovie;
+package com.movie.member;
 
 import java.util.List;
 

@@ -15,8 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.movie.board.MovieBoardService;
-import com.movie.mymovie.MyMovie;
-import com.movie.mymovie.MyMovieDAO;
+
 
 @Controller
 public class MemberController {

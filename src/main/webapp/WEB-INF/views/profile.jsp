@@ -81,11 +81,13 @@
 				</a>
 				<h2 style="padding: 4px;">
 					<%=mm_name%></h2>
-
-				<form action="mymovie_delete">
+<!-- 
+<form action="mymovie_delete">
 					<input type="hidden" name="mm_name" value="${mm.mm_name} " />
 					<button type="submit" class="btn btn-danger">삭제</button>
 				</form>
+ -->
+				
 
 
 

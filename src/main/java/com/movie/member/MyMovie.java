@@ -1,4 +1,4 @@
-package com.movie.mymovie;
+package com.movie.member;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;

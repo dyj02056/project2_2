@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.movie.mymovie.MyMovieMapper">
-	<insert id="regMyMovie" parameterType="com.movie.mymovie.MyMovie">
+<mapper namespace="com.movie.member.MyMovieMapper">
+	<insert id="regMyMovie" parameterType="com.movie.member.MyMovie">
 		insert into mymovie(mm_id, mm_name) 
 		values(#{mm_id}, #{mm_name})
 	</insert>
-	<select id="listMyMovie" resultType="com.movie.mymovie.MyMovie">
+	<select id="listMyMovie" resultType="com.movie.member.MyMovie">
 		select * from mymovie where mm_id = #{mm_id}
 	</select>
 	
 	
-	<delete id="deleteMyMovie" parameterType="String">
+	<delete id="deleteMyMovie" >
 		delete from mymovie where mm_name=#{mm_name}
 	</delete>
 </mapper>
