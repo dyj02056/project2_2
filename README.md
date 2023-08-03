@@ -6,6 +6,9 @@
 - [정승오](https://github.com/number6241): 로그인 및 로그아웃, 회원가입, MyPage(유저정보) Boxoffice(예매 순위), Infomation(포털 정보), Movie Chart(누적 관객 수)
 
 ## 사용기
+<div align=left><h1>📚 STACKS</h1></div>
+
+<div align=left>
 <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white"> 
 <br>
 
@@ -24,6 +27,7 @@
 
 <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
 <br>
+</div>
 
 ## 프로젝트 주요 기능
 - 회원가입 및 로그인
