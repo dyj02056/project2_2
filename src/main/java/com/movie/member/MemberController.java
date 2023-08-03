@@ -68,20 +68,20 @@ public class MemberController {
 		return "main";
 	}
 	
-	@RequestMapping(value = "/profile", method = RequestMethod.GET)
-    public String showProfilePage(HttpServletRequest req,Model model) { 
-        HttpSession session = req.getSession();
-        String m_id = (String) session.getAttribute("m_id");
-        Member member = mDAO.getMemberProfile(m_id);
-        req.setAttribute("member", member);
-        session.setAttribute("member",member);
-        
-        
-        List<MyMovie> mml = (List<MyMovie>)session.getAttribute("mml");
-        model.addAttribute("mml",mml);
-
-        req.setAttribute("contentPage", "profile.jsp");
-        req.setAttribute("topmenu", "maintop.jsp");
-        return "main";
-    }
+//	@RequestMapping(value = "/profile", method = RequestMethod.GET)
+//    public String showProfilePage(HttpServletRequest req,Model model) { 
+//        HttpSession session = req.getSession();
+//        String m_id = (String) session.getAttribute("m_id");
+//        Member member = mDAO.getMemberProfile(m_id);
+//        req.setAttribute("member", member);
+//        session.setAttribute("member",member);
+//        
+//        
+//        List<MyMovie> mml = (List<MyMovie>)session.getAttribute("mml");
+//        model.addAttribute("mml",mml);
+//
+//        req.setAttribute("contentPage", "profile.jsp");
+//        req.setAttribute("topmenu", "maintop.jsp");
+//        return "main";
+//    }
 }

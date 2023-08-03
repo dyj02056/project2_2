@@ -29,6 +29,26 @@ public class MyMovieController {
 	@Autowired
 	private SqlSession ss3;
 	
+	@Autowired
+	private MemberDAO mDAO1;
+	
+	@RequestMapping(value = "/profile", method = RequestMethod.GET)
+    public String showProfilePage(HttpServletRequest req,Model model) { 
+        HttpSession session = req.getSession();
+        String m_id = (String) session.getAttribute("m_id");
+        Member member = mDAO1.getMemberProfile(m_id);
+        req.setAttribute("member", member);
+        session.setAttribute("member",member);
+        
+        List<MyMovie> mml = mservice.listMyMovie((String)session.getAttribute("m_id"));
+		model.addAttribute("mml",mml);
+        
+        req.setAttribute("contentPage", "profile.jsp");
+        req.setAttribute("topmenu", "maintop.jsp");
+        return "main";
+    }
+	
+	
 	@RequestMapping(value="/mymovie.reg", method=RequestMethod.GET)
 	public String regMyMovie(MyMovie mm, HttpServletRequest req, Model model) {
 		HttpSession hs = req.getSession();
@@ -41,7 +61,7 @@ public class MyMovieController {
 	
 		List<MyMovie> mml = mservice.listMyMovie((String)hs.getAttribute("m_id"));
 		model.addAttribute("mml",mml);
-		hs.setAttribute("mml", mml);
+
 		
 		req.setAttribute("contentPage", "profile.jsp");
 		req.setAttribute("topmenu", "maintop.jsp");

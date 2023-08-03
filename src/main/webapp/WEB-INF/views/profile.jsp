@@ -70,6 +70,10 @@
 
 					if (imageUrl == null) {
 						imageUrl = "https://img.freepik.com/premium-photo/cinema-clap-film-roll-blue-studio-background_241146-2364.jpg";
+					}else if (mm_name.equals("더 문")){
+						imageUrl="resources/img/themoon.jpg";
+					}else if (mm_name.equals("기생충")){
+						imageUrl="resources/img/parasite1.webp";
 					}
 
 					String trailerLink = MovieApiUtil2.getTrailerLinkFromTitle(mm_name);
