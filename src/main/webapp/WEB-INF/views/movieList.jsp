@@ -70,7 +70,7 @@
 				for (int i = 0; i < dbol.size(); i++) {
 					JSONObject obj = (JSONObject) dbol.get(i);
 					String title = (String) obj.get("movieNm");
-					//hs.setAttribute("mm_name", title);
+					
 					String rank = (String) obj.get("rank");
 					String salesShare = (String) obj.get("salesShare");
 					String releaseDate = (String) obj.get("openDt");
@@ -79,6 +79,8 @@
 					if (imageUrl == null) {
 
 						imageUrl = "https://img.freepik.com/premium-photo/cinema-clap-film-roll-blue-studio-background_241146-2364.jpg";
+					}else if(title.equals("더 문")){
+						imageUrl = "resources/img/themoon.jpg";
 					}
 
 					String trailerLink = MovieApiUtil.getTrailerLinkFromTitle(title);

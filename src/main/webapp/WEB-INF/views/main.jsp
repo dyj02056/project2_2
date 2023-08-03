@@ -38,7 +38,7 @@ body {
 		<table id="headerTBL1">
 			<tr>
 				<td id="mainlogo"><a href="main">Homepage</a></td>
-				<td><a href="Information">Information</a></td>
+				<td><a href="Information">Manual</a></td>
 
 				<td><a href="BoxOffice">BoxOffice</a></td>
 				<td><a href="movieSearch">Movie Search</a></td>
@@ -52,7 +52,7 @@ body {
 					m_id = (String)hs.getAttribute("m_id");
 					if(!m_id.equals("")){
 						%>
-						<td><a href="Board">Board</a></td>
+						<td><a href="Board">FreeBoard</a></td>
 						<% 
 					}
 					

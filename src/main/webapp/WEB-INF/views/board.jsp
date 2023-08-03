@@ -15,7 +15,7 @@ html>
 </head>
 <body>
 
-<h1 class="titleH1" style="color: white;" align="center"> Board</h1>
+<h1 class="titleH1" style="color: white;" align="center"> FreeBoard</h1>
 
 	<div>
 

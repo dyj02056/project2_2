@@ -12,16 +12,18 @@
   <script type="text/javascript" src="resources/js/e1.js"></script>
 </head>
 <body>
-     <h1 class="titleH1">Information</h1>
+     <h1 class="titleH1">Manual</h1>
+<!-- 
+  <table class="boardTBL"> 
+    <tr>
+      <td>Manual - 프로젝트  메뉴에 대한 설명</td>
+    </tr>
+  </table>
+ -->
 
   <table class="boardTBL"> 
     <tr>
-      <td>Information - 프로젝트 페이지 메뉴에 대한 설명</td>
-    </tr>
-  </table>
-  <table class="boardTBL"> 
-    <tr>
-      <td>Login / Sign up - 회원가입을 통해 개인정보를 DB에 저장하여 로그인이 가능</td>
+      <td>Login / Sign - 회원가입을 통해 개인정보를 DB에 저장하여 로그인이 가능</td>
     </tr>
   </table>
 
