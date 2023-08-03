@@ -5,7 +5,7 @@
 - [정성원](https://github.com/dyj02056): 영화 검색 및 상세 정보, 게시판(목록 조회, 상세 조회, 수정, 삭제), 댓글 (등록, 수정, 삭제), DB 구축 및 관리, 찜 목록
 - [정승오](https://github.com/number6241): 로그인 및 로그아웃, 회원가입, MyPage(유저정보) Boxoffice(예매 순위), Infomation(포털 정보), Movie Chart(누적 관객 수)
 
-## 사용기
+##
 <div align=left><h1>📚 STACKS</h1></div>
 
 <div align=left>
