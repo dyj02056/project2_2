@@ -68,6 +68,7 @@
 				String mm_name = (String) pageContext.getAttribute("mm_name");
 					String imageUrl = MovieApiUtil2.getImageUrlFromTitle(mm_name);
 
+					
 					if (imageUrl == null) {
 						imageUrl = "https://img.freepik.com/premium-photo/cinema-clap-film-roll-blue-studio-background_241146-2364.jpg";
 					}else if (mm_name.equals("더 문")){
