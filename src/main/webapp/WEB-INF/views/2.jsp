@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <h1 class="titleH1">Movies Weekly Chart</h1>
+    <h1 class="titleH1">Movies Chart</h1>
 
     <div class="container">
         <div id="movieChart" class="chart-container"></div>
