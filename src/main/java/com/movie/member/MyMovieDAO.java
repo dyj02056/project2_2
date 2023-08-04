@@ -30,8 +30,8 @@ public class MyMovieDAO {
 		return ss3.getMapper(MyMovieMapper.class).listMyMovie(mm_id);
 	}
 	
-	public void deleteMyMovie( String mm_name) {
-		ss3.getMapper(MyMovieMapper.class).deleteMyMovie( mm_name);
+	public void deleteMyMovie(int mm_no) {
+		ss3.getMapper(MyMovieMapper.class).deleteMyMovie(mm_no);
 	}
 	
 }

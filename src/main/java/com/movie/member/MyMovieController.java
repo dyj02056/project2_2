@@ -69,11 +69,10 @@ public class MyMovieController {
 		
 	}
 	
-	@RequestMapping(value="mymovie_delete", method=RequestMethod.GET)
+	@RequestMapping(value="mymovie_delete{mm_no}", method=RequestMethod.GET)
 	public String deleteMyMovie(HttpServletRequest req,
-		Model model, MyMovie mm, String mm_name) {
-		System.out.println(mm_name);
-		mservice.deleteMyMovie(mm_name);
+		Model model, MyMovie mm,  @PathVariable("mm_no") int mm_no) {
+		mservice.deleteMyMovie(mm_no);
 		HttpSession hs = req.getSession();
 		mm.setMm_id((String) hs.getAttribute("m_id"));
 		

@@ -13,8 +13,8 @@ public class MyMovieService {
 	public List<MyMovie> listMyMovie(String mm_id){
 		return mmDAO.listMyMovie(mm_id);
 	}
-	public void deleteMyMovie(String mm_name) {
-		mmDAO.deleteMyMovie(mm_name);
+	public void deleteMyMovie(int mm_no) {
+		mmDAO.deleteMyMovie(mm_no);
 	}
 	
 }

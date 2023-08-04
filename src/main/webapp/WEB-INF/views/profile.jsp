@@ -63,18 +63,18 @@
 	<table>
 		<c:forEach var="mm" items="${mml }">
 			<c:set var="mm_name" value="${mm.mm_name}" />
+			<c:set var="mm_no" value="${mm.mm_no}" />
 			<c:set var="mml" value="${mml} " />
 			<%
 				String mm_name = (String) pageContext.getAttribute("mm_name");
 					String imageUrl = MovieApiUtil2.getImageUrlFromTitle(mm_name);
 
-					
 					if (imageUrl == null) {
 						imageUrl = "https://img.freepik.com/premium-photo/cinema-clap-film-roll-blue-studio-background_241146-2364.jpg";
-					}else if (mm_name.equals("더 문")){
-						imageUrl="resources/img/themoon.jpg";
-					}else if (mm_name.equals("기생충")){
-						imageUrl="resources/img/parasite1.webp";
+					} else if (mm_name.equals("더 문")) {
+						imageUrl = "resources/img/themoon.jpg";
+					} else if (mm_name.equals("기생충")) {
+						imageUrl = "resources/img/parasite1.webp";
 					}
 
 					String trailerLink = MovieApiUtil2.getTrailerLinkFromTitle(mm_name);
@@ -86,13 +86,13 @@
 				</a>
 				<h2 style="padding: 4px;">
 					<%=mm_name%></h2>
-<!-- 
-<form action="mymovie_delete">
-					<input type="hidden" name="mm_name" value="${mm.mm_name} " />
+
+				<form action="mymovie_delete${mm.mm_no}">
+					<!--  <input type="hidden" name="mm_no" value="${mm.mm_no} " /> -->
 					<button type="submit" class="btn btn-danger">삭제</button>
 				</form>
- -->
-				
+
+
 
 
 

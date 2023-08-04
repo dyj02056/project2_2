@@ -11,7 +11,7 @@
 </head>
 <body>
 
-	<h1 class="titleH1" align = "center"> JoxOffice </h1>
+	<h1 class="titleH1" align = "center"> Moviepedia </h1>
 	 <p><img width = "100%" height = "90%" src="resources/img/44.gif"></p>
 
 
