@@ -130,7 +130,7 @@
 					
 					<input type="hidden" name="mm_name" value="<%=title %>">
 					<input type="hidden" name="mm_id" value="<%=m_id %>"></input>
-					<button type="submit" class="btn btn-success">등록</button>
+					<button type="submit" class="btn btn-success">찜</button>
 				
 				</form>
 				

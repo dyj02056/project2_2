@@ -1,4 +1,6 @@
+<%@page import="java.util.List"%>
 <%@page import="com.movie.MovieApiUtil"%>
+<%@page import="com.movie.member.MyMovie"%>
 <%@page import="com.movie.MovieApiUtil2"%>
 <%@page import="org.json.simple.JSONArray"%>
 <%@page import="org.json.simple.JSONObject"%>
@@ -60,13 +62,22 @@
 			<td>이메일 : ${member.m_email}</td>
 		</tr>
 	</table>
+	
+	<% int line_num=0; %>
+	
 	<table>
+		
 		<c:forEach var="mm" items="${mml }">
 			<c:set var="mm_name" value="${mm.mm_name}" />
 			<c:set var="mm_no" value="${mm.mm_no}" />
 			<c:set var="mml" value="${mml} " />
+
 			<%
+				
 				String mm_name = (String) pageContext.getAttribute("mm_name");
+				if (mm_name != null){
+					line_num +=1;
+				}
 					String imageUrl = MovieApiUtil2.getImageUrlFromTitle(mm_name);
 
 					if (imageUrl == null) {
@@ -78,7 +89,10 @@
 					}
 
 					String trailerLink = MovieApiUtil2.getTrailerLinkFromTitle(mm_name);
-			%>
+					
+						%> 
+	
+					
 			<div class="movie-card top-movie-card"
 				style="float: right; margin: 10px;">
 				<a href="<%=trailerLink%>" target="_blank"> <img
@@ -91,12 +105,8 @@
 					<!--  <input type="hidden" name="mm_no" value="${mm.mm_no} " /> -->
 					<button type="submit" class="btn btn-danger">삭제</button>
 				</form>
-
-
-
-
-
 			</div>
+			
 		</c:forEach>
 	</table>
 
