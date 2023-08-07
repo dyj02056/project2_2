@@ -34,6 +34,9 @@
 		<p>
 			<a href="signup"><button>회원가입</button></a>
 		</p>
+		<p>
+			<a href="emailconfirm"><button>아이디 비밀번호 찾기</button></a>
+		</p>
 	</div>
 
 </body>
