@@ -1,5 +1,7 @@
 package com.movie.board;
 
+
+
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
